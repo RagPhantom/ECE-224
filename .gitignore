@@ -1,0 +1,10 @@
+# Quartus compile temp files
+LogicalStep/db/
+LogicalStep/incremental_db/
+*.flock
+
+# Eclipse workspace metadata
+LogicalStep/.metadata/
+
+# Nios II build outputs
+LogicalStep/software/*/obj/
