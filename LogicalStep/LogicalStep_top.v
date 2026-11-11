@@ -104,7 +104,7 @@ module LogicalStep_top
 		.clk_clk                    (clkin_50),                    //           clk.clk
 		.reset_n_reset_n            (rst_n),            //       reset_n.reset_n
 		.sdram_clk_clk              (sdram_clk),              //     sdram_clk.clk
-		.audio_mclk_clk             (audio_mclk),             //    audio_mclk.clk
+		.audio_mclk_clk             (aud_mclk),             //    audio_mclk.clk
 		.sdram_0_addr               (sdram_a),               //       sdram_0.addr
 		.sdram_0_ba                 (sdram_ba),                 //              .ba
 		.sdram_0_cas_n              (sdram_cas_n),              //              .cas_n

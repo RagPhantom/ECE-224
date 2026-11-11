@@ -1,5 +1,5 @@
 Flow report for LogicalStep_top
-Sat Oct 31 16:54:08 2026
+Wed Nov 11 15:55:06 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Oct 31 16:54:08 2026           ;
+; Flow Status                        ; Successful - Wed Nov 11 15:55:06 2026           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; LogicalStep_top                                 ;
 ; Top-level Entity Name              ; LogicalStep_top                                 ;
 ; Family                             ; MAX 10                                          ;
 ; Device                             ; 10M08SAE144C8G                                  ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6,984 / 8,064 ( 87 % )                          ;
-;     Total combinational functions  ; 5,994 / 8,064 ( 74 % )                          ;
+; Total logic elements               ; 6,993 / 8,064 ( 87 % )                          ;
+;     Total combinational functions  ; 5,992 / 8,064 ( 74 % )                          ;
 ;     Dedicated logic registers      ; 4,531 / 8,064 ( 56 % )                          ;
 ; Total registers                    ; 4599                                            ;
 ; Total pins                         ; 96 / 101 ( 95 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/31/2026 16:52:53 ;
+; Start date & time ; 11/11/2026 15:53:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LogicalStep_top     ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                                                                                     ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 79306761369567.179347997300508                                                                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 79306761351344.179443042303000                                                                            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                                                                                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                                                                                    ; <None>        ; --          ; --             ;
 ; ENABLE_SIGNALTAP                     ; On                                                                                                        ; --            ; --          ; --             ;
@@ -149,13 +149,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 5143 MB             ; 00:00:54                           ;
-; Fitter               ; 00:00:17     ; 1.9                     ; 6325 MB             ; 00:00:48                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4729 MB             ; 00:00:01                           ;
-; Power Analyzer       ; 00:00:04     ; 3.1                     ; 5031 MB             ; 00:00:11                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4804 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4750 MB             ; 00:00:03                           ;
-; Total                ; 00:01:05     ; --                      ; --                  ; 00:01:59                           ;
+; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 5143 MB             ; 00:00:56                           ;
+; Fitter               ; 00:00:21     ; 1.9                     ; 6329 MB             ; 00:00:53                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4730 MB             ; 00:00:02                           ;
+; Power Analyzer       ; 00:00:04     ; 3.0                     ; 5033 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4805 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4747 MB             ; 00:00:03                           ;
+; Total                ; 00:01:14     ; --                      ; --                  ; 00:02:07                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -164,12 +164,12 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; ECE-CPUIO2-12    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; ECE-CPUIO2-12    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; ECE-CPUIO2-12    ; Windows 10 ; 10.0       ; x86_64         ;
-; Power Analyzer       ; ECE-CPUIO2-12    ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; ECE-CPUIO2-12    ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ECE-CPUIO2-12    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; ECE-CPUIO2-17    ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ECE-CPUIO2-17    ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ECE-CPUIO2-17    ; Windows 10 ; 10.0       ; x86_64         ;
+; Power Analyzer       ; ECE-CPUIO2-17    ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ECE-CPUIO2-17    ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ECE-CPUIO2-17    ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
