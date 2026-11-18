@@ -166,7 +166,7 @@ ELF_PATCH_FLAG  += --timestamp 1790189835
 # setting altera_avalon_jtag_uart_driver.enable_jtag_uart_ignore_fifo_full_error is false
 
 # Small-footprint (polled mode) driver none 
-# setting altera_avalon_jtag_uart_driver.enable_small_driver is false
+# setting altera_avalon_jtag_uart_driver.enable_small_driver is true
 
 # Enable driver ioctl() support. This feature is not compatible with the 
 # 'small' driver; ioctl() support will not be compiled if either the UART 
@@ -378,6 +378,12 @@ ALT_INCLUDE_DIRS += $(ALT_LIBRARY_ROOT_DIR)/HAL/inc
 #------------------------------------------------------------------------------
 
 ALT_CPPFLAGS += -DALT_SINGLE_THREADED
+
+#------------------------------------------------------------------------------
+#        SOFTWARE COMPONENT & DRIVER SETTING-PRODUCED DEFINITIONS
+#------------------------------------------------------------------------------
+
+ALT_CPPFLAGS += -DALTERA_AVALON_JTAG_UART_SMALL
 
 #END MANAGED
 

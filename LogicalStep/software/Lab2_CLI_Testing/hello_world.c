@@ -193,7 +193,7 @@ void display_help(void)
           "fi <log drv#> - Force initialize the logical drive\n"
           "fl [<path>] - Directory listing\n"
           "fo <mode> <file> - Open a file\n"
-    	  "fp -  (to be added by you) \n"
+    	  "fp <len> - Play 16 bit stereo data \n"
           "fr <len> - Read file\n"
           "fs [<path>] - Show logical drive status\n"
           "fz [<len>] - Get/Set transfer unit for fr/fw commands\n"
@@ -493,38 +493,40 @@ int main(void)
                     break;
                 ofs = File1.fptr;
                 int i = 0;
+
                 while (p1)
 		{
 /*
 		<<<<<<<<<<<<<<<<<<<<<<<<< YOUR fp CODE GOES IN HERE >>>>>>>>>>>>>>>>>>>>>>
 */
-
-		alt_up_audio_dev * audio_dev;
-		/* used for audio record/playback */
-		unsigned int l_buf;
-		unsigned int r_buf;
-
-		// open the Audio port
-		audio_dev = alt_up_audio_open_dev ("/dev/Audio");
-		if ( audio_dev == NULL)
-			alt_printf ("Error: could not open audio device \n");
-		else
-			alt_printf ("Opened audio device \n");
-		/* read and echo audio data */
-		while(1)
+		if (!xatoi(&ptr, &p1))
+			break;
+		p2 = 0;
+		Timer = 0;
+		while (p1)
 		{
-			int fifospace = alt_up_audio_read_fifo_avail (audio_dev, ALT_UP_AUDIO_RIGHT);
-			if ( fifospace > 0 ) // check if data is available
+			if ((uint32_t) p1 >= blen)
 			{
-				// read audio buffer
-				alt_up_audio_read_fifo (audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
-				alt_up_audio_read_fifo (audio_dev, &(l_buf), 1, ALT_UP_AUDIO_LEFT);
-
-				// write audio buffer
-				alt_up_audio_write_fifo (audio_dev, &(r_buf), 1, ALT_UP_AUDIO_RIGHT);
-				alt_up_audio_write_fifo (audio_dev, &(l_buf), 1, ALT_UP_AUDIO_LEFT);
+				cnt = blen;
+				p1 -= blen;
 			}
+			else
+			{
+				cnt = p1;
+				p1 = 0;
+			}
+			res = f_read(&File1, Buff, cnt, &s2);
+			if (res != FR_OK)
+			{
+				put_rc(res); // output a read error if a read error occurs
+				break;
+			}
+			p2 += s2; // increment p2 by the s2 referenced value
+			if (cnt != s2) //error if cnt does not equal s2 referenced value ???
+				break;
 		}
+		xprintf("%lu bytes read with %lu kB/sec.\n", p2, Timer ? (p2 / Timer) : 0);
+		break;
 
 		}
 		xprintf("done\n");

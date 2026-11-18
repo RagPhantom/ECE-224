@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 18, 2026 1:55:34 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1795028134979</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Nov 18, 2026 2:31:10 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1795030270048</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\s56yao\ECE224\LogicalStep\software\Lab2_CLI_Testing_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\QD1.sopcinfo</SopcDesignFile>
@@ -902,7 +902,7 @@
                 <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
                 <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
                 <Type>BooleanDefineOnly</Type>
-                <Value>false</Value>
+                <Value>true</Value>
                 <DefaultValue>false</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Small-footprint (polled mode) driver</Description>
